@@ -1,0 +1,84 @@
+Student Name #1: TODO: Midori Takeuchi
+Student ugrad login #1: TODO: v3w8
+
+Student Name #2: TODO: Sydney Campbell
+Student ugrad login #2: TODO: a0g9
+
+Team name (for fun!): TODO: Squirrely Girls
+
+Acknowledgment that you understand and have followed the course's
+collaboration policy
+(http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
+
+TODO: [[Put your names here again as a signature]]
+Midori Takeuchi
+Sydney Campbell
+TODO: submit using: make handin-proj1
+
+----------------------------------------------------------------------
+
+Approximate hours on project: TODO:
+15-20
+----------------------------------------------------------------------
+
+For teams, rough breakdown of work: TODO:
+Midori: ArrayQueue
+Sydney: LinkListQueue
+Both worked on HeapPriorityQueue + Handin
+----------------------------------------------------------------------
+
+Acknowledgment of assistance: TODO:
+in-lab help
+----------------------------------------------------------------------
+
+Questions:
+
+For the explanations, generally a sentence or two should be enough.
+Type your answers directly in this file.
+
+
+1.  Edit solve.cpp to use your queue classes to solve the MazeRunner
+puzzle.  Set a large delay in the solvePuzzle function (like 1000000).
+Do you see why this is called breadth-first search (BFS)?
+How many steps long was your solution?  How does this compare with
+your answers to #2 and #3 on your MILESTONE?
+
+TODO:
+Yes, can see it's trying all moves from the start, then trying all moves from where the first moves end.
+ArrayQueue: 58 steps
+LinkedListQueue: 58 steps
+HeapPriorityQueue: 58 steps
+Same number of steps as in MILESTONE using BFS and VectorPriorityQueue. It takes less steps than 
+#2 in the MILESTONE since it is using BFS rather than DFS.
+
+2.  Try to solve the blank Sudoku board using your ArrayQueue
+and LinkedListQueue classes.  What happens?
+
+TODO:
+
+LinkedListQueue and ArrayQueue run forever! 
+
+3.  Switch to the medium-difficulty Sudoku problem, and comment
+out the delay and the print statements in the solvePuzzle function.
+How long does it take to solve the puzzle using your ArrayQueue
+class?  Using your LinkedListQueue class?  Is the difference big?
+
+TODO: LinkedListQueue: ~1min 53sec
+      ArrayListQueue: ~2min 40sec
+There is almost a minute difference solving the puzzle between LinkedListQueue and ArrayListQueue (pretty big!).  
+
+4.  Edit solve.cpp to switch to the 4x4 slider puzzle.  Make sure
+to comment out the delay and print statements in the solvePuzzle function.
+How long does it take to solve this problem with your HeapPriorityQueue
+versus my VectorPriorityQueue?  Why is mine faster?  Are the asymptotic
+runtimes for the heap versus the vector wrong?
+
+TODO:
+HeapPriorityQueue: ~ 1min 03sec
+VectorPriorityQueue: ~ 3min 7sec
+VectorPQ's runtime is O(n) and HeapPQ's runtime is O(lgn).
+VectorPQ is faster because at a small enough input,it is faster than HeapPQ.
+----------------------------------------------------------------------
+
+We will be checking your implementations of ArrayQueue, LinkedListQueue,
+and HeapPriorityQueue.

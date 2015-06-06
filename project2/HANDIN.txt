@@ -1,0 +1,128 @@
+Student Name #1: TODO: Midori Takeuchi
+Student ugrad login #1: TODO: v3w8
+
+Student Name #2: TODO: Sydney Campbell
+Student ugrad login #2: TODO: a0g9
+
+Team name (for fun!): TODO: Squirrely Girls
+
+Acknowledgment that you understand and have followed the course's
+collaboration policy
+(http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
+
+TODO: [[Put your names here again as a signature]]
+Midori Takeuchi
+Sydney Campbell
+TODO: submit using: make handin-proj2
+
+----------------------------------------------------------------------
+
+Approximate hours on project: TODO:
+
+30-35 hours
+
+----------------------------------------------------------------------
+
+For teams, rough breakdown of work: TODO:
+Equal work done on each class. 
+Ex. Sydney did most of AVL class and I debugged it when we got errors and vice versa.
+----------------------------------------------------------------------
+
+Acknowledgment of assistance: TODO:
+
+----------------------------------------------------------------------
+
+Questions:
+
+For the explanations, generally a sentence or two should be enough.
+Type your answers directly in this file.
+
+
+1.  Edit solve.cpp to use VectorPriorityQueue and LinkedListDict.
+How long did it take to solve the 4x4 slider puzzle?  The 5x5?
+The 6x6 (or how long did you wait before giving up)?  Also, record
+what kind of computer you ran your experiments on.
+
+TODO:
+
+On MacBook Pro: 
+4x4: 0.100 sec
+5x5: ~4 min 0.231 sec
+6x6: Waited around 20 mins and gave up. 
+
+2.  While still using VectorPriorityQueue, edit solve.cpp to use
+your AVLDict implementation.
+How long did it take to solve the 4x4, 5x5, and 6x6 slider puzzles?
+Also, record what kind of computer you ran your experiments on.
+This should be noticeably faster!
+
+TODO:
+
+Macbook: 
+4x4: 0.048 sec
+5x5: 1 min 7.038 sec
+6x6: Waited around 30 mins and gave up. Not sure why it's taking so long! 
+Triple checked that my height, rotates, and balance functions were the same as given. Also checked implementation of add function: TA noted that I shouldn't need root as a parameter but when I remove it from my helper function the program gets a seg fault. 
+3.  For each of the 4x4, 5x5, and 6x6 slider puzzles,
+what was the average depth of the calls to find() recorded
+in the statistics reported by the program?  Is this growing
+as the puzzle size grows?
+
+TODO:
+4x4: ~9.123
+5x5: ~ 14.847
+6x6: Ran forever, wasn't able to get depths.  
+
+4.  While still using VectorPriorityQueue, edit solve.cpp to use
+your LinearHashDict implementation.
+How long did it take to solve the 4x4, 5x5, and 6x6 slider puzzles?
+Also, record what kind of computer you ran your experiments on.
+How do these times compare with your AVLDict implementation?
+
+TODO:
+
+4x4: 0.055 sec
+5x5: 5.830 sec
+6x6: 1 min 53.050 sec 
+
+5.  For each of the 4x4, 5x5, and 6x6 slider puzzles,
+what was the average number of extra probes per call to find()
+recorded in the statistics reported by the program?  Is this growing
+as the puzzle size grows?
+
+TODO:
+4x4: ~0.700467
+5x5: ~0.7223
+6x6: ~0.67615
+
+6.  While still using VectorPriorityQueue, edit solve.cpp to use
+your DoubleHashDict implementation.
+How long did it take to solve the 4x4, 5x5, and 6x6 slider puzzles?
+Also, record what kind of computer you ran your experiments on.
+How do these times compare with your LinearHashDict implementation?
+
+TODO:
+
+4x4: 0.040 sec
+5x5: 7.953 sec
+6x6: 1 min 55.752 sec
+
+7.  For each of the 4x4, 5x5, and 6x6 slider puzzles,
+what was the average number of extra probes per call to find()
+recorded in the statistics reported by the program?
+How does this compare with your LinearHashDict implementation?
+Why isn't DoubleHashDict that much faster?
+
+TODO:
+4x4: 0.5728
+5x5: 0.5488
+6x6: 0.5217
+
+DoubleHashDict isn't that much faster because of one, potentially the servers being slow
+since all comp sci 221 students must be on it tonight. 
+Also, in hash1 it's returning h which is (keyID [i] +31*h) in hash 2 it's h is the same thingbut it's times by 63 instead of 31 and it is return h/2+1 so really the hash2 value is only bigger by 1, hence why it isn't that much faster than LinearHashDict (h+1 instead of h). 
+
+----------------------------------------------------------------------
+
+We will be checking your implementations of AVLDict, LinearHashDict,
+and DoubleHashDict.

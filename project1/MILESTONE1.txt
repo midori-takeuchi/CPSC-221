@@ -1,0 +1,87 @@
+Student Name #1: TODO: Midori Takeuchi 
+Student ugrad login #1: TODO: v3w8
+
+Student Name #2: TODO: Sydney Campbell
+Student ugrad login #2: TODO: a0g9 
+
+TODO: Acknowledgment that you understand and have followed the course's collaboration policy
+(http://www.ugrad.cs.ubc.ca/~cs221/current/syllabus.shtml#conduct):
+
+TODO: [[Put your names here again as signature]]
+Midori Takeuchi
+Sydney Campbell
+TODO: submit using: make handin-milestone1
+(Run that from one of the UBC ugrad computers, after you have transfered
+your files there and tested to make sure they work correctly on our systems.)
+
+----------------------------------------------------------------------
+
+Questions:
+
+For the explanations, generally a sentence or two should be enough.
+Type your answers directly in this file.
+
+
+1.  Edit solve.cpp to solve the empty Sudoku board.  (You should
+only comment out one line and uncomment one line to do that.)
+Then change the delay in the usleep delay in the solvePuzzle function
+to 100000.  What solution do you get?
+
+STEP 82:
+ 9 8 7 6 5 4 3 2 1
+ 6 5 4 3 2 1 9 8 7
+ 3 2 1 9 8 7 6 5 4
+ 8 9 6 7 4 5 2 1 3
+ 7 4 5 2 1 3 8 9 6
+ 2 1 3 8 9 6 7 4 5
+ 5 7 9 4 6 8 1 3 2
+ 4 6 8 1 3 2 5 7 9
+ 1 3 2 5 7 9 4 6 8
+
+
+TODO:
+
+2.  Edit solve.cpp to solve the MazeRunner problem, and set the code
+to declare activeStates as ArrayStack or LinkedListStack.
+Do you see why it's called depth-first search (DFS)?
+How many steps long was the solution it found?
+
+I can see why it's called depth-first search because I see the player going down  
+a route of the maze as far as it can go until it hits a wall, where it then backtracks
+and goes through different routes. 
+64 steps
+
+TODO:
+
+3.  Next, edit solve.cpp again to switch to make activeStates
+a VectorPriorityQueue.  This gives you best-first search (BestFS).
+How many steps long was the solution it found?
+
+TODO:
+
+58 steps
+
+4.  Edit solve.cpp to switch to the 3x3 slider puzzle.  Also,
+comment out the delay and print statements in the solvePuzzle function.
+How long does it take to solve this problem with BestFS (using
+VectorPriorityQueue as in the preceding question)?
+
+TODO:
+
+59 steps
+It took less than 1 second to solve this problem with BestFS.
+
+5.  Edit solve.cpp to switch back to ArrayStack or LinkedListStack,
+which switches back to DFS.  Try solving the 3x3 slider puzzle.
+What happens?  Why?
+
+TODO:
+When I switched back to DFS and tried to run, the program got stuck and gave
+no output. I'm assuming this happened because of the way DFS works. With the slider
+puzzle, there isn't a simple way to rearrange multiple puzzles, you're only able 
+to slide one puzzle piece. In the case of the 3x3 slider puzzle, DFS was working
+in such a way that it would move until it got stuck, which was probably quite often. 
+The program probably kept running into places where it got stuck that it was unable 
+to give a proper output.  
+
+----------------------------------------------------------------------
